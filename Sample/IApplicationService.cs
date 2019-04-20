@@ -11,11 +11,4 @@ namespace Sample
     {
         void Execute(ICommand cmd);
     }
-
-
-    public interface IEvent {}
-
-    public interface ICommand {}
-
-    public interface IIdentity {}
 }

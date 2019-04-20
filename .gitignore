@@ -10,3 +10,4 @@ _ReSharper.*
 *.DotSettings
 *.Cache
 *.cache
+/.vs/lokad-iddd-sample/v15/Server/sqlite3

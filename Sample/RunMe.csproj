@@ -47,11 +47,38 @@
     <Reference Include="System.Data" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Domain\Contracts.cs" />
+    <Compile Include="Domain\AddCustomerPayment.cs" />
+    <Compile Include="Domain\ChargeCustomer.cs" />
+    <Compile Include="Domain\CustomerId.cs" />
+    <Compile Include="Domain\CreateCustomer.cs" />
+    <Compile Include="Domain\Currency.cs" />
+    <Compile Include="Domain\CurrencyAmount.cs" />
+    <Compile Include="Domain\CurrencyExtension.cs" />
     <Compile Include="Domain\CustomerAggregate\Customer.cs" />
     <Compile Include="Domain\CustomerAggregate\CustomerApplicationService.cs" />
     <Compile Include="Domain\CustomerAggregate\CustomerState.cs" />
-    <Compile Include="Projections\CustomerListProjection.cs" />
+    <Compile Include="Domain\CustomerChargeAdded.cs" />
+    <Compile Include="Domain\CustomerCreated.cs" />
+    <Compile Include="Domain\CustomerLocked.cs" />
+    <Compile Include="Domain\CustomerPaymentAdded.cs" />
+    <Compile Include="Domain\CustomerRenamed.cs" />
+    <Compile Include="Domain\LockCustomer.cs" />
+    <Compile Include="Domain\LockCustomerForAccountOverdraft.cs" />
+    <Compile Include="Domain\PricingService.cs" />
+    <Compile Include="Domain\RenameCustomer.cs" />
+    <Compile Include="ICommand.cs" />
+    <Compile Include="IEvent.cs" />
+    <Compile Include="IIdentity.cs" />
+    <Compile Include="Projections\AddOrUpdateHint.cs" />
+    <Compile Include="Projections\CustomerTransactionsProjection.cs" />
+    <Compile Include="Projections\CustomerTransaction.cs" />
+    <Compile Include="Projections\CustomerTransactions.cs" />
+    <Compile Include="Projections\ExtendDocumentWriter.cs" />
+    <Compile Include="Storage\AppendOnlyStoreConcurrencyException.cs" />
+    <Compile Include="Storage\AppendWriterDelegate.cs" />
+    <Compile Include="Storage\DataWithName.cs" />
+    <Compile Include="Storage\DataWithVersion.cs" />
+    <Compile Include="Storage\EventStream.cs" />
     <Compile Include="Storage\IAppendOnlyStore.cs" />
     <Compile Include="Projections\IDocumentWriter.cs" />
     <Compile Include="Storage\IEventStore.cs" />
@@ -61,11 +88,13 @@
     <Compile Include="Storage\EventStore.cs" />
     <Compile Include="Storage\Azure\AutoRenewLease.cs" />
     <Compile Include="Storage\Azure\BlobAppendOnlyStore.cs" />
-    <Compile Include="Storage\Files\FileEventStore.cs" />
-    <Compile Include="Storage\MsSql\SqlEventStore.cs" />
+    <Compile Include="Storage\Files\FileAppendOnlyStore.cs" />
+    <Compile Include="Storage\MsSql\SqlAppendOnlyStore.cs" />
     <Compile Include="Storage\MySql\MySqlEventStore.cs" />
-    <Compile Include="Interfaces.cs" />
+    <Compile Include="IApplicationService.cs" />
     <Compile Include="Program.cs" />
+    <Compile Include="Storage\OptimisticConcurrencyException.cs" />
+    <Compile Include="Storage\RealConcurrencyException.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Properties\" />
